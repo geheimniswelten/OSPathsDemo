@@ -1,0 +1,476 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'OSPathsDemoForm'
+  ClientHeight = 770
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  OnSaveState = FormSaveState
+  DesignerMasterStyle = 3
+  object TabControl: TTabControl
+    Align = Client
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Size.Width = 378.000000000000000000
+    Size.Height = 722.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 4
+    TabPosition = PlatformDefault
+    Sizes = (
+      378s
+      673s
+      378s
+      673s)
+    object TabPaths: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 189.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'System-Paths'
+      ExplicitSize.cx = 200.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object MemoPaths: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 14.000000000000000000
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.X = 8.000000000000000000
+        Position.Y = 53.000000000000000000
+        Size.Width = 366.000000000000000000
+        Size.Height = 615.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 23
+        Viewport.Width = 358.000000000000000000
+        Viewport.Height = 607.000000000000000000
+      end
+      object Label2: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 362.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.VertAlign = Leading
+        Text = 'What system paths are there, e.g. for program and user data.'
+        TabOrder = 22
+      end
+    end
+    object TabSaveUser: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 189.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Save UserData'
+      ExplicitSize.cx = 201.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object VertScrollBox1: TVertScrollBox
+        Align = Client
+        Size.Width = 378.000000000000000000
+        Size.Height = 673.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 23
+        OnResized = VertScrollBox1Resized
+        Viewport.Width = 378.000000000000000000
+        Viewport.Height = 673.000000000000000000
+        object Layout1: TLayout
+          Position.Y = 8.000000000000000000
+          Size.Width = 385.000000000000000000
+          Size.Height = 441.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object ButtonDelete: TButton
+            Position.X = 8.000000000000000000
+            Position.Y = 400.000000000000000000
+            Size.Width = 153.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Delete TestData'
+            TextSettings.Trimming = None
+            OnClick = ButtonDeleteClick
+          end
+          object LabelSaveState: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'transparentedit'
+            TabOrder = 1
+            ReadOnly = True
+            Text = 'Form.SaveState'
+            Position.X = 8.000000000000000000
+            Position.Y = 31.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnEnter = LabelPathEnter
+            OnExit = LabelPathExit
+          end
+          object EditSaveState: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'c=22:22:22  s=11:11:11')
+            ReadOnly = True
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 56.000000000000000000
+            Size.Width = 216.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Viewport.Width = 208.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object UserEditSaveState: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 232.000000000000000000
+            Position.Y = 56.000000000000000000
+            Size.Width = 139.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Viewport.Width = 131.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object LabelHomePath: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'transparentedit'
+            TabOrder = 4
+            ReadOnly = True
+            Text = 'HomePath'
+            Position.X = 8.000000000000000000
+            Position.Y = 90.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnEnter = LabelPathEnter
+            OnExit = LabelPathExit
+          end
+          object EditHomePath: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 116.000000000000000000
+            Size.Width = 216.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            Viewport.Width = 208.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object UserEditHomePath: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 232.000000000000000000
+            Position.Y = 116.000000000000000000
+            Size.Width = 139.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+            Viewport.Width = 131.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object LabelDocuments: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'transparentedit'
+            TabOrder = 7
+            ReadOnly = True
+            Text = 'Documents'
+            Position.X = 8.000000000000000000
+            Position.Y = 150.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnEnter = LabelPathEnter
+            OnExit = LabelPathExit
+          end
+          object EditDocuments: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 176.000000000000000000
+            Size.Width = 216.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 8
+            Viewport.Width = 208.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object UserEditDocuments: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 232.000000000000000000
+            Position.Y = 176.000000000000000000
+            Size.Width = 139.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+            Viewport.Width = 131.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object LabelSharedDocuments: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'transparentedit'
+            TabOrder = 10
+            ReadOnly = True
+            Text = 'SharedDocuments'
+            Position.X = 8.000000000000000000
+            Position.Y = 210.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnEnter = LabelPathEnter
+            OnExit = LabelPathExit
+          end
+          object EditSharedDocuments: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 236.000000000000000000
+            Size.Width = 216.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 11
+            Viewport.Width = 208.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object UserEditSharedDocuments: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 232.000000000000000000
+            Position.Y = 236.000000000000000000
+            Size.Width = 139.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 12
+            Viewport.Width = 131.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object LabelPublicPath: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'transparentedit'
+            TabOrder = 13
+            ReadOnly = True
+            Text = 'PublicPath'
+            Position.X = 8.000000000000000000
+            Position.Y = 270.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnEnter = LabelPathEnter
+            OnExit = LabelPathExit
+          end
+          object EditPublicPath: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 296.000000000000000000
+            Size.Width = 216.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 14
+            Viewport.Width = 208.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object UserEditPublicPath: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 232.000000000000000000
+            Position.Y = 296.000000000000000000
+            Size.Width = 139.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 15
+            Viewport.Width = 131.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object LabelSharedPref: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            StyleLookup = 'transparentedit'
+            TabOrder = 16
+            ReadOnly = True
+            Text = 'JSharedPreferences'
+            Position.X = 8.000000000000000000
+            Position.Y = 330.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnEnter = LabelPathEnter
+            OnExit = LabelPathExit
+          end
+          object EditSharedPref: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 356.000000000000000000
+            Size.Width = 216.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 17
+            Viewport.Width = 208.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object UserEditSharedPref: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ShowScrollBars = False
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 17.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 232.000000000000000000
+            Position.Y = 356.000000000000000000
+            Size.Width = 139.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 18
+            Viewport.Width = 131.000000000000000000
+            Viewport.Height = 24.000000000000000000
+          end
+          object Label1: TLabel
+            Anchors = [akLeft, akTop, akRight]
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 363.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.VertAlign = Leading
+            Text = 'In which system paths can user data be stored.'
+            TabOrder = 19
+          end
+        end
+      end
+    end
+  end
+  object spacerKeyboard: TLayout
+    Align = Bottom
+    Position.Y = 728.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 0.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+  object PanelMenu: TLayout
+    Align = MostBottom
+    Position.Y = 728.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object ButtonTerminate: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 58.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Terminate'
+      TextSettings.Trimming = None
+      OnClick = ButtonTerminateClick
+    end
+    object ButtonClose: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 166.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Close'
+      TextSettings.Trimming = None
+      OnClick = ButtonCloseClick
+    end
+    object ButtonFullClose: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 274.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'FullClose'
+      TextSettings.Trimming = None
+      OnClick = ButtonFullCloseClick
+    end
+  end
+end
